@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get("/add_bookmark", { :controller => "movies", :action => "add_user_bookmark"})
+
   # Routes for the Bookmark resource:
 
   # CREATE
@@ -18,6 +20,8 @@ Rails.application.routes.draw do
   get("/delete_bookmark/:path_id", { :controller => "bookmarks", :action => "destroy" })
 
   #------------------------------
+
+  get("/", { :controller => "movies", :action => "index" })
 
   # Routes for the User account:
 
